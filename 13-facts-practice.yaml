@@ -1,0 +1,13 @@
+---
+- name: Understand ansible facts
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: Print only OS family
+      debug:
+        var: ansible_facts['os_family']
+
+    - name: Print only hostname
+      debug:
+        var: ansible_facts['hostname']
