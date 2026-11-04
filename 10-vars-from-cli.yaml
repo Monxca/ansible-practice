@@ -1,0 +1,14 @@
+---
+- name: Command line variable
+  hosts: local
+  connection: local
+  
+  vars_prompt:
+    - name: person
+      prompt: What is your name?
+
+  tasks:
+    - name: Print the name from the Command
+      debug:
+        msg: Hello person
+        msg: Hello {{ person_name }}, how are you?
