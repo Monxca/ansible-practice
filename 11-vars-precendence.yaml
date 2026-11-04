@@ -11,7 +11,7 @@
       prompt: What is the name of the course?
       private: false
   
-  vars_file:
+  vars_files:
     - course.yaml
 
   tasks:
