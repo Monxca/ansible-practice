@@ -3,8 +3,8 @@
   hosts: local
   connection: local
 
-  vars:
-    course: "ansible from play"
+  #vars:
+   # course: "ansible from play"
   
   #vars_prompt:
    # - name: course
