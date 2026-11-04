@@ -6,13 +6,15 @@
   #vars:
    # course: "ansible from play"
   
-  #vars_prompt:
-   # - name: course
-   #   prompt: What is the name of the course?
-   #   private: false
   
-  #vars_files:
-   # - course.yaml
+  
+  vars_files:
+    - course.yaml
+
+  vars_prompt:
+    - name: course
+      prompt: What is the name of the course?
+      private: false
 
   tasks:
     - name: Print course information
