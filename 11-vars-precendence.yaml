@@ -1,0 +1,22 @@
+---
+- name: Variables from precedence
+  hosts: local
+  connection: local
+
+  vars:
+    course: "ansible from play"
+  
+  vars_prompt:
+    - name: course
+      prompt: What is the name of the course?
+      private: false
+  
+  var_files:
+    - course.yaml
+
+  tasks:
+    - name: Print course information
+      vars:
+        course: "ansible from task"
+      debug:
+        msg: Hi, I am learning {{ course }}
