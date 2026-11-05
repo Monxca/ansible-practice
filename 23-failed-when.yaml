@@ -7,7 +7,7 @@
     - name: failed when tasks
       command: ls /etc/os-release
       register: os_info
-      failed-when: os_info.rc != 0
+      failed_when: os_info.rc != 0
 
     - name: Print success message
       debug:
