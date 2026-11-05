@@ -19,11 +19,11 @@
 
     - name: convert to list
       debug:
-        msg: "{{ topics | split(,) | map(trim) | list }}"
+        msg: "{{ topics | split(',') | map(trim) | list }}"
 
     - name: convert to string
       debug:
-        msg: "Firstname: {{ first_name | join() }}"
+        msg: "Firstname: {{ first_name | join( ) }}"
 
     - name: convert to lowercase
       debug:
