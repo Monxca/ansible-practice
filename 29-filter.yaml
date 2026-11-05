@@ -19,7 +19,7 @@
 
     - name: convert to list
       debug:
-        msg: "{{ topics | split(',') | map(trim) | list }}"
+        msg: "{{ topics | split(',') | map('trim') | list }}"
 
     - name: convert to string
       debug:
