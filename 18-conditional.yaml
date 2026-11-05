@@ -3,16 +3,16 @@
   hosts: local
   connection: local
 
-  vars:
-    given_number: 17
+  vars_prompt:
+    number: Write the number here?
 
   tasks:
     - name: even 
       debug:
-        msg: "Given number : {{ given_number }} is even"
+        msg: "Given number : {{ number }} is even"
       when: given_number % 2 == 0
 
     - name: odd
       debug:
-        msg: "Given number : {{ given_number }} is odd"
+        msg: "Given number : {{ number }} is odd"
       when: given_number % 2 != 0
