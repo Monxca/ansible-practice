@@ -10,6 +10,14 @@
     - us-east-3a
 
   tasks:
-    - name: Print the List
+    - name: Print the first item
       debug:
         msg: "{{ aws_regions[0] }}"
+
+    - name: Print the third item
+      debug:
+        msg: "{{ aws_regions[2] }}"
+
+    - name: Print the second item
+      debug:
+        msg: "{{ aws_regions[1] }}"
