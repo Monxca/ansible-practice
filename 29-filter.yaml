@@ -5,17 +5,11 @@
 
   vars:
     topics: "apple, mango, grapes, lemon, banana"
-
-  vars:
     first_name:
       - Monica
       - Jai
       - Kumar
-
-  vars:
     person_name: RONALD
-    
-  vars:
     number: "4"
 
   tasks:
