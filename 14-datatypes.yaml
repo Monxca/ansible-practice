@@ -1,0 +1,19 @@
+---
+- name: Learning four datatypes
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: Print the datatypes
+      debug:
+        msg: |
+          String: {{ name }}
+          Integer: {{ whole_number }}
+          Boolean: {{ is_true }}
+          Float: {{ decimal }}
+
+  vars:
+    name: monica
+    whole_number: 100
+    is_true: false
+    decimal: 1.5
