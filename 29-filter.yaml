@@ -31,5 +31,5 @@
 
     - name: convert to integer
       debug:
-        msg: "{{ number | int }}"
+        msg: " Hi, the number is {{ number | int }}"
 
