@@ -5,15 +5,16 @@
 
   vars_prompt:
     - name: number
-      prompt: Write the number here?
+      prompt: Type the number to check whether it is even or odd
+      private: false
 
   tasks:
     - name: even 
       debug:
         msg: "Given number : {{ number }} is even"
-      when: given_number % 2 == 0
+      when: number % 2 == 0
 
     - name: odd
       debug:
         msg: "Given number : {{ number }} is odd"
-      when: given_number % 2 != 0
+      when: number % 2 != 0
