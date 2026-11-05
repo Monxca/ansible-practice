@@ -1,0 +1,15 @@
+---
+- name: Listing the items
+  hosts: local
+  connection: local
+
+  vars:
+    aws-regions:
+      - us-east-1a
+      - us-east-2a
+      - us-east-3a
+
+  tasks:
+    - name: Print the List
+      debug:
+        msg: "{{ aws-regions }}"
