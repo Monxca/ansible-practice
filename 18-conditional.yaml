@@ -4,7 +4,7 @@
   connection: local
 
   vars:
-    given_number: 10
+    given_number: 17
 
   tasks:
     - name: even 
