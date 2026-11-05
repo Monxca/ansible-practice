@@ -2,7 +2,10 @@
 - name: Default filter example
   hosts: local
   connection: local
-  
+
+  vars:
+    person_name: Monica
+    
   tasks:
     - name: Demonstrating the default value
       debug:
