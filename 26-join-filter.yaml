@@ -1,0 +1,15 @@
+---
+- name: Join filter usage
+  hosts: local
+  connection: local
+
+  vars:
+    first_name:
+      - Monica
+      - Jai
+      - Kumar
+
+  tasks:
+    - name: demontrating join filter
+      debug:
+        msg: "First name: {{ first_name | join(' ') }}"
