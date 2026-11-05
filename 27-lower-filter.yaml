@@ -5,8 +5,13 @@
 
   vars:
     topic: ANSIBLE
+    course: devops
 
   tasks:
     - name: Conversion to lowercase
       debug:
         msg: "{{ topic | lower }}"
+
+    - name: Conversion to lowercase
+      debug:
+        msg: "{{ course | upper }}"
