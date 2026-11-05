@@ -1,14 +1,17 @@
 ---
 - name: Multiple conditions with AND OR
   hosts: local
+  connection: local
 
   tasks:
     - name: Checking with AND
       debug:
         msg: Both the conditions are true
-      when: ansible_facts['os_family'] == "RedHat" AND ansible_facts['os_family'] == "Debian"
+      when: 
+        - ansible_facts['os_family'] == "RedHat"
+        - ansible_facts['os_family'] == "Debian"
 
     - name: Checking with OR
       debug:
         msg: Atleast one condition is true
-      when: ansible_facts['os_family'] == "RedHat" OR ansible_facts['os_family'] == "Debian"
+      when: ansible_facts['os_family'] == "RedHat" or ansible_facts['os_family'] == "Debian"
