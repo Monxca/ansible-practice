@@ -1,0 +1,12 @@
+---
+- name: Lower filter usage
+  hosts: local
+  connection: local
+
+  vars:
+    topic: ANSIBLE
+
+  tasks:
+    - name: Conversion to lowercase
+      debug:
+        msg: "{{ topic | lower }}"
