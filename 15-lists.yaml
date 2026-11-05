@@ -12,4 +12,4 @@
   tasks:
     - name: Print the List
       debug:
-        msg: "{{ aws_regions }}"
+        msg: "{{ aws_regions[0] }}"
