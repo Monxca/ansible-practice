@@ -4,7 +4,8 @@
   connection: local
 
   vars_prompt:
-    number: Write the number here?
+    - name: number
+      prompt: Write the number here?
 
   tasks:
     - name: even 
