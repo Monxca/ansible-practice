@@ -23,7 +23,7 @@
 
     - name: convert to string
       debug:
-        msg: "Firstname: {{ first_name | join( ) }}"
+        msg: "Firstname: {{ first_name | join(' ') }}"
 
     - name: convert to lowercase
       debug:
