@@ -1,7 +1,8 @@
 ---
 - name: Default filter example
   hosts: local
-
+  connection: local
+  
   tasks:
     - name: Demonstrating the default value
       debug:
