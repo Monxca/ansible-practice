@@ -1,0 +1,8 @@
+---
+- name: Default filter example
+  hosts: local
+
+  tasks:
+    - name: Demonstrating the default value
+      debug:
+        msg: "Hi, {{ person_name | default('Ramesh') }}"
