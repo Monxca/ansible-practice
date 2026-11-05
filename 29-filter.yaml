@@ -12,8 +12,10 @@
       - Jai
       - Kumar
 
+  vars:
     person_name: RONALD
-
+    
+  vars:
     number: "4"
 
   tasks:
