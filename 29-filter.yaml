@@ -1,0 +1,39 @@
+---
+- name: Trying all the filter modules
+  hosts: local
+  connection: local
+
+  vars:
+    topics: "apple, mango, grapes, lemon, banana"
+
+  vars:
+    first_name:
+      - Monica
+      - Jai
+      - Kumar
+
+    person_name: RONALD
+
+    number: "4"
+
+  tasks:
+    - name: Type the default value
+      debug:
+        msg: "Hi, {{ person | default('Ramesh') }}"
+
+    - name: convert to list
+      debug:
+        msg: "{{ topics | split(,) | map(trim) | list }}"
+
+    - name: convert to string
+      debug:
+        msg: "Firstname: {{ first_name | join() }}"
+
+    - name: convert to lowercase
+      debug:
+        msg: "{{ person_name | lower }}"
+
+    - name: convert to integer
+      debug:
+        msg: "{{ number | int }}"
+
