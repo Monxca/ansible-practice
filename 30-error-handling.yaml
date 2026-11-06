@@ -2,7 +2,7 @@
 - name: create a new user if it doesn't exist
   hosts: local
   connection: local
-
+  become: yes
   tasks:
     - name: check if the user exists
       command: id roboshop
