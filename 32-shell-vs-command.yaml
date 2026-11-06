@@ -11,7 +11,7 @@
 
     - name: Print the os information
       debug:
-        msg: "{{ os_output }}"
+        msg: "{{ os_output.stdout }}"
 
     - name: shell usage
       shell: cat /etc/passwd | grep "ec2-user"
@@ -20,7 +20,7 @@
 
     - name: Print the os information
       debug:
-        msg: "{{ ec2user }}"  
+        msg: "{{ ec2user.stdout }}"  
 
     - name: shell usage
       shell: echo "Hello, World" > /tmp/ansible_demo.txt
@@ -29,4 +29,4 @@
 
     - name: Print the os information
       debug:
-        msg: "{{ appending }}"
+        msg: "{{ appending.stdout }}"
