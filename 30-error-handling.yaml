@@ -11,8 +11,8 @@
 
     - name: print the user output
       debug:
-        msg: "{{ user_output }}"
+        msg: "{{ user_output.stdout }}"
 
     - name: create the user when it doesn't exist
       command: useradd roboshop
-      when: user_output != 0
+      when: user_output.rc != 0
