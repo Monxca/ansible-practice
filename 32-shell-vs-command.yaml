@@ -1,0 +1,32 @@
+---
+- name: shell vs command
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: command usage
+      command: cat /etc/os-release
+      register: os_output
+      changed_when: false
+
+    - name: Print the os information
+      debug:
+        msg: "{{ os_output }}"
+
+    - name: shell usage
+      shell: cat /etc/passwd | grep "ec2-user"
+      register: ec2user
+      changed_when: false
+
+    - name: Print the os information
+      debug:
+        msg: "{{ ec2user }}"  
+
+    - name: shell usage
+      shell: echo "Hello, World" > /tmp/ansible_demo.txt
+      register: appending
+      changed_when: false
+
+    - name: Print the os information
+      debug:
+        msg: "{{ appending }}"
