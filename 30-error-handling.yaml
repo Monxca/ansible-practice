@@ -11,7 +11,7 @@
 
     - name: print the user output
       debug:
-        msg: "{{ user_output.stdout }}"
+        msg: "{{ user_output }}"
 
     - name: create the user when it doesn't exist
       command: useradd roboshop
