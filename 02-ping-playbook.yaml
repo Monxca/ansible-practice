@@ -1,7 +1,0 @@
----
-- name: Learning ping module
-  hosts: local
-  connection: local
-  tasks:
-    - name: ping localhost
-      ansible.builtin.ping:
