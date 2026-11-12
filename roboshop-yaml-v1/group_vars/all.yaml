@@ -4,3 +4,4 @@ mongodb_host: mongodb.devme.store
 redis_host: redis.devme.store
 mysql_host: mysql.devme.store
 rabbitmq_host: rabbitmq.devme.store
+mysql_root_password: RoboShop@1
