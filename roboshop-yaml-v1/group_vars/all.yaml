@@ -1,0 +1,6 @@
+ansible_user: ec2-user
+ansible_password: DevOps321
+mongodb_host: mongodb.devme.store
+redis_host: redis.devme.store
+mysql_host: mysql.devme.store
+rabbitmq_host: rabbitmq.devme.store
