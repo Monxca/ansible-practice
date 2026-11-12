@@ -1,6 +1,6 @@
 ---
 - name: Configure the rabbitmq server
-  hosts: local
+  hosts: rabbitmq
   become: yes
 
   tasks:
