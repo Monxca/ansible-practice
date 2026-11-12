@@ -9,7 +9,7 @@
 
     - name: install the servers
       package:
-        name: mysql-servers
+        name: mysql-server
         state: present
 
     - name: start and enable the service
