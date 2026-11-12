@@ -1,0 +1,17 @@
+---
+- name: Learning loops
+  hosts: local
+  connection: local
+
+  vars:
+    aws_regions:
+      - us-east-1a
+      - us-east-2a
+      - us-east-3a
+
+  tasks:
+    - name: Loop the items
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ aws_regions }}"
+    

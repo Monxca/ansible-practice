@@ -1,0 +1,16 @@
+---
+- name: int filter usage
+  hosts: local
+  connection: local
+
+  vars:
+    duration: "4"
+
+  tasks:
+    - name: int filter display
+      debug:
+        msg: "Hi, the {{ duration | int }} hours is the duration"
+
+    - name: Calculations
+      debug:
+        msg: "Duration is: {{ (duration | int) + 2 }} hours"

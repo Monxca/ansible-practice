@@ -1,0 +1,23 @@
+---
+- name: Learning dictionaries
+  hosts: local
+  connection: local
+
+  vars:
+    employee:
+      person_name: monica
+      age: 26
+      place: bangalore
+
+  tasks:
+    - name: Printing the dictionary item
+      debug:
+        msg: "{{ employee }}"
+
+    - name: Print the first item
+      debug:
+        msg: "{{ employee.age}}"
+
+    - name: Print the first item
+      debug:
+        msg: "{{ employee['place']}}"

@@ -1,0 +1,17 @@
+---
+- name: Play level vs Task level variables
+  hosts: local
+  connection: local
+  vars:
+    land: "100 acres"
+
+  tasks:
+    - name: Play level
+      debug: 
+        msg: My dad gifted me {{ land }} of land
+
+    - name: Task level
+      vars:
+        land: "10 acres"
+      debug:
+        msg: My dad gifted me {{ land }} of land

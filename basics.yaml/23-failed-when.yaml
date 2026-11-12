@@ -1,0 +1,14 @@
+---
+- name: Failed when register
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: failed when tasks
+      command: ls /etc/os-release
+      register: os_info
+      failed_when: os_info.rc != 0
+
+    - name: Print success message
+      debug:
+        msg: Command printed successfully

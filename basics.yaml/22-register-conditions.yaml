@@ -1,0 +1,20 @@
+---
+- name: Conditions in register module
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: Capture the os os_info
+      command: cat /etc/os-release
+      register: os_info
+      changed_when: false
+
+    - name: Check if it runs on RHEL
+      debug:
+        msg: It is using RHEL
+      when: "'Red Hat Enterprise Linux' in os_info.stdout"
+
+    - name: Check if it runs Ubuntu
+      debug:
+        msg: It uses Ubuntu
+      when: "'Ubuntu' in os_info.stdout"

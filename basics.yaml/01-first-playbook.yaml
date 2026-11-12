@@ -1,0 +1,7 @@
+---
+- name: My first ansible practice
+  hosts: localhost
+  tasks:
+    - name: Print a message
+      ansible.builtin.debug:
+        msg: "Hello, Ansible"
