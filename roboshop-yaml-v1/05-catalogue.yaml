@@ -5,7 +5,7 @@
 
   tasks:
     - name: disable default nodejs
-      command: dnf module disable nodejs
+      command: dnf module disable nodejs -y
 
     - name: enable nodejs24
       command: dnf module enable nodejs:24 -y
