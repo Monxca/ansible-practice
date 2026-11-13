@@ -10,6 +10,7 @@
       - mysql
       - rabbitmq
       - catalogue
+      - user
 
     action: create
     domain_name: devme.store
