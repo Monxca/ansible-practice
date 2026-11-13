@@ -11,6 +11,7 @@
       - rabbitmq
       - catalogue
       - user
+      - cart
 
     action: create
     domain_name: devme.store
