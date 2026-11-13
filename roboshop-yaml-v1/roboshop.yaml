@@ -9,6 +9,7 @@
       - redis
       - mysql
       - rabbitmq
+      - catalogue
 
     action: create
     domain_name: devme.store
