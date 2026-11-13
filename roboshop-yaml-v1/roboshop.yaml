@@ -12,6 +12,7 @@
       - catalogue
       - user
       - cart
+      - shipping
 
     action: create
     domain_name: devme.store
